@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="toDoListStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> Group 38 Task Manager</h1>
+            <p>Organize your work and life, finally.</p>
+        </header>
+        
+        <div class="app-controls">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <button id="addTaskBtn"><i class="fas fa-plus"></i></button>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="task-count">Total tasks: <span id="totalTasks">0</span></div>
+            <div class="completed-count">Completed: <span id="completedTasks">0</span></div>
+            <button class="clear-btn" id="clearCompletedBtn">
+                <i class="fas fa-trash-alt"></i> Clear Completed
+            </button>
+        </div>
+        
+        <ul class="task-list" id="taskList">
+            <!-- Tasks will be added here dynamically -->
+        </ul>
+        
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No tasks found</h3>
+            <p>Add a new task or change your filter settings</p>
+        </div>
+    </div>
+
+    <script src="toDoListScript.js"></script>
+</body>
+</html>
